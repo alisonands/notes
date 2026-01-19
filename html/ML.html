@@ -22,7 +22,7 @@
 
 <body class="latex-dark" id="top">
     <header role="banner">
-        <h1><span class="latex">Machine Learning Methods</span></h1>
+        <h1><span class="latex">Machine Learning</span></h1>
         <p class="author">
             Alison Andrade <br />
     </header>
@@ -30,14 +30,66 @@
     <nav role="navigation" class="toc">
         <h2>Contents</h2>
         <ol>
+            <li><a href="#machine_learning">Machine Learning</a></li>
+            <ol>
+                <li><a href="#definitions">Definitions</a></li>
+                <li><a href="#types_of_data">Types of Data</a></li>
+                <li><a href="#model_types">Model Types</a></li>
+            </ol>
             <li><a href="#supervised">Supervised learning</a></li>
             <li><a href="#unsupervised">Unsupervised learning</a></li>
-            <li><a href="#resources">Some resources</a></li>
+            <li><a href="#neural_networks">Neural Networks</a></li>
+            <ol>
+                <li><a href="#what_are_nns_useful_for">What are NNs useful for</a></li>
+                <li><a href="#backpropagation">Backpropagation</a></li>
+            </ol>
+            <li><a href="#RL">Reinforcement learning</a></li>
+            <li><a href="#resources">Resources</a></li>
         </ol>
     </nav>
 
     <main>
         <article>
+            <h2 id="machine_learning">Machine learning</h2>
+            <ul>
+                <li>Enabling computers and systems to learn from experience (data), 
+                    often without explicit programming for every rule or scenario.
+                </li>
+            </ul>
+            <h3 id="definitions">Definitions</h3>
+            <ul>
+                <li>Instance - a single data point</li>
+                <li>Feature - A measurable property/charasteric</li>
+                <li>Feature vector - The set of all features for an instance</li>
+                <li>Label (Target/Output) - pass/fail, yes/no etc. </li>
+                <br>
+                <img src="../img/ML_workflow.png" alt="ML_workflow">
+                <br>
+                <li><b>Training</b> - model learns from parameters by adjusting weights</li>
+                <li><b>Loss function</b> - quantifies error of models preidctions</li>
+                <li><b>Opdimization</b> - updates parameters to minimize loss</li>
+                <li><b>Generalization</b> - a models ability to perform on new, unseen data</li>
+                <li><b>Label encoding</b> - convert categorical entries into numerical</li>
+                <li><b>Feature Engineering</b> - Selecting, editing, and/or transforming data to expose some useful structure
+                for model processing</li>
+                <li><b>Hyperparameters</b> - set of user defined parameters ex. learning rate, step size, number of neural layers,
+                batch size, etc.</li>
+            </ul>
+
+            <h3 id="types_of_data">Types of data</h3>
+            <ul>
+                <li>Numerical $\rightarrow$ Continuous/Discrete</li>
+                <li>Categorical $\rightarrow$ Nominal/Ordinal</li>
+                <li>Time Series $\rightarrow$ time</li>
+                <li>Image/Text/Audio</li>
+            </ul>
+
+            <h3 id="model_types">Model types</h3>
+            <ul>
+                <li>Linear $\rightarrow$ weighted sum of features</li>
+                <li>Non-Linear $\rightarrow$ Neural networks, random forests, etc.</li>
+            </ul>
+
             <h2 id="supervised">Supervised learning</h2>
             <ul>
                 <li>Classification</li>
@@ -68,8 +120,37 @@
                 </ul>
             </ul>
 
+            <h2 id="neural_networks">Neural Networks</h2>
+            <ul>
+                <li> Perceptron: a simple neural network
+                    <img src="../img/perceptron.png" alt="perceptron">
+                </li>
+                <li>After summing the weights, $S = i_1w_1+1_2w_2+1_3w_3+1_4w_4$, a threshold/activation function is applied
+                    to output a binary value. i.e. if $S>0.5$ or if $S<0.5$.
+                </li>
+                <li>The Sigmoid function is an example of an activation function.
+                    $$O = \frac{1}{1+e^{-S}}$$
+                </li>
+            </ul>
 
-            <h2 id="resources">Some resources</h2>
+            <h3 id="what_are_nns_useful_for">What are NNs useful for</h3>
+            <ul>
+                <li>Useful for pattern recognition.</li>
+                <li>We can upgrade to multiple neurons for more sophisticated recognition
+                    <img src="../img/three-layer-network.png" alt="three-layer-network">
+                </li>
+                <li></li>
+            </ul>
+
+            <h3 id="backpropagation">Backpropagation</h3>
+            <ul>
+                <li></li>
+            </ul>
+            
+
+            <h2 id="RL">Reinforcement learning</h2>
+
+            <h2 id="resources">Resources</h2>
             <ul>
                 <li><a href="https://hal.science/hal-03830094v1/file/Chapter%2002%20-%20Final.pdf">a compherensive overview</a></li>
             </ul>
