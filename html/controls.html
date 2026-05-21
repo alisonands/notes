@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="tm5Y6ZNTf-lBqbwniGjQPv1q02o2TuUQZ9GTYa4SMLg" />
+    <title>Template</title>
+
+    <meta name="description"
+        content="A minimal, almost class-less CSS library to write modern websites that look like LaTeX documents." />
+    <meta name="keywords" content="latex.css,css library,class-less css,latex css" />
+    <meta property="og:title" content="LaTeX.css" />
+    <meta property="og:url" content="https://latex.vercel.app" />
+    <meta property="og:description"
+        content="A minimal, almost class-less CSS library to write modern websites that look like LaTeX documents." />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../prism/prism.css" />
+</head>
+
+<body class="latex-dark" id="top">
+    <header role="banner">
+        <h1><span class="latex">Template</span></h1>
+        <p class="author">
+            Alison Andrade <br />
+    </header>
+
+    <nav>
+        <h2>Controls</h2>
+        <ol>
+            <li><a href="#root_locus">Root Locus</a></li>
+            <li>Lead-Lag</li>
+            <li>Bode</li>
+            <li>Nyquist</li>
+        </ol>
+
+    </nav>
+
+    <main>
+        <article>
+            <h2 id="root_locus">Root Locus</h2>
+            <li>Steps to sketching and determining parameters of the Root Locus plots are as follows</li>
+            <ol>
+                <li>Poles and Zeros</li>
+                <ul>
+                    <li>Define the transfer function ex. $$G(s) = \frac{2s + 10}{s(s + 1)(s + 3)}$$</li>
+                    <li>The poles are -3, -1 and the zeros are -5</li>
+                    <li>The number of poles are 3 and the number of zeros are 1</li>
+                </ul>
+                <li>Identify number of branches</li>
+                <ul>
+                    <li>num of branches = num of poles</li>
+                </ul>
+                <li>Breakaway/in points</li>
+                <ul>
+                    <li>$$\frac{dK}{ds} = 0$$</li>
+                    where $$K = -\frac{1}{G(s)H(s)}$$
+                </ul>
+                <li>Asymptotes</li>
+                <li>Crossover points</li>
+                <li>Angle of arrival and departure</li>
+            </ol>
+        </article>
+    </main>
+
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'],],
+            },
+        }
+        const typeFaceToggle = document.getElementById('typeface-toggle')
+        const typeface = document.getElementById('typeface')
+        typeFaceToggle.addEventListener('click', () => {
+            document.body.classList.toggle('libertinus')
+            typeface.textContent = document.body.classList.contains('libertinus') ? 'Libertinus' : 'Latin Modern'
+        })
+
+        const darkModeToggle = document.getElementById('dark-mode-toggle')
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('latex-dark')
+        })
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script async src="prism/prism.js"></script>
+</body>
