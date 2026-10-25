@@ -30,9 +30,16 @@
     <nav>
         <h2>Controls</h2>
         <ol>
+            <li><a href="#definitions">Definitions</a></li>
+            <ol>
+                <li id="steady_state_error">Steady state error</li>
+            </ol>
             <li><a href="#root_locus">Root Locus</a></li>
             <li>Lead-Lag</li>
-            <li>Bode</li>
+            <li><a href="#bode">Bode</a></li>
+            <!-- <ol>
+                <li>Frequency analysis</li>
+            </ol> -->
             <li>Nyquist</li>
         </ol>
 
@@ -40,6 +47,14 @@
 
     <main>
         <article>
+            <h2 id="definitions">Definitions</h2>
+            <h3 id="steady_state_error">Steady-state error</h3>
+            <ul>
+                <li>Error after transient response has decayed</li>
+                <li><u>Final value theorem</u></li>
+                $$\text{lim}_{s \rightarrow 0}\,sE(s)$$
+            </ul>
+
             <h2 id="root_locus">Root Locus</h2>
             <li>Steps to sketching and determining parameters of the Root Locus plots are as follows</li>
             <ol>
@@ -62,6 +77,12 @@
                 <li>Crossover points</li>
                 <li>Angle of arrival and departure</li>
             </ol>
+
+            <h2 id="bode">Bode</h2>
+            <u>Frequency analysis</u>
+            <ul>
+                <li>The frequency response of a system is defined as the steady-state response of the system to a sinusoidal input signal.</li>
+            </ul>
         </article>
     </main>
 
